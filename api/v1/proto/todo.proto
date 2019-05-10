@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "common.proto";
+
+package v1;
+
+service TodoService {
+    rpc Post(stream Todo) returns (Empty) {}
+}
+
+message Todo {
+    string body = 1;
+    string title = 2;
+}

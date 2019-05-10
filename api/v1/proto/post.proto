@@ -1,12 +1,12 @@
 syntax = "proto3";
 
+import "common.proto";
+
 package v1;
 
 service PostService {
     rpc Get(Empty) returns (Posts) {}
 }
-
-message Empty {}
 
 message Post {
     int32 userId = 1;
