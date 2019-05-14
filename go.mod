@@ -1,4 +1,4 @@
-module github.com/azharprabudi/go-grpc
+module github.com/azharprabudi/go_grpc
 
 go 1.12
 

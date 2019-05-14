@@ -3,8 +3,8 @@ package controller
 import (
 	"context"
 
-	v1 "github.com/azharprabudi/go-grpc/api/v1/pb_go"
-	service "github.com/azharprabudi/go-grpc/internal/go_grpc/service/post"
+	v1 "github.com/azharprabudi/go_grpc/api/v1/pb_go"
+	service "github.com/azharprabudi/go_grpc/internal/go_grpc/service/post"
 )
 
 type PostController struct {

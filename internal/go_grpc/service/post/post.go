@@ -3,7 +3,7 @@ package service
 import (
 	"encoding/json"
 
-	v1 "github.com/azharprabudi/go-grpc/api/v1/pb_go"
+	v1 "github.com/azharprabudi/go_grpc/api/v1/pb_go"
 	fazzcloud "github.com/payfazz/go-apt/pkg/fazzcloud"
 )
 

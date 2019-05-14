@@ -2,10 +2,9 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"log"
 
-	v1 "github.com/azharprabudi/go-grpc/api/v1/pb_go"
+	v1 "github.com/azharprabudi/go_grpc/api/v1/pb_go"
 	"google.golang.org/grpc"
 )
 
@@ -15,13 +14,23 @@ func main() {
 		log.Fatal(err)
 	}
 
-	client := v1.NewPostServiceClient(conn)
-
 	ctx := context.Background()
-	resp, err := client.Get(ctx, &v1.Empty{})
+	client := v1.NewTodoServiceClient(conn)
+
+	call, err := client.Post(ctx)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println(resp)
+	call.Send(&v1.Todo{
+		Body:  "kondel",
+		Title: "kondel123",
+	})
+
+	call.Send(&v1.Todo{
+		Body:  "kondel",
+		Title: "kondel123",
+	})
+
+	call.CloseSend()
 }
